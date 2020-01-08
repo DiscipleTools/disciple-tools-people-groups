@@ -126,7 +126,7 @@ class DT_People_Groups{
         if ( $type === 'contacts' ){
             $args = [
                 'connected_type'   => "contacts_to_peoplegroups",
-                'connected_direction' => 'to', //@todo ?
+                'connected_direction' => 'to',
                 'connected_items'  => $people_group,
                 'nopaging'         => true,
                 'suppress_filters' => false,
@@ -142,7 +142,7 @@ class DT_People_Groups{
         if ( $type === 'groups' ){
             $args = [
                 'connected_type'   => "groups_to_peoplegroups",
-                'connected_direction' => 'to', //@todo ?
+                'connected_direction' => 'to',
                 'connected_items'  => $people_group,
                 'nopaging'         => true,
                 'suppress_filters' => false,
