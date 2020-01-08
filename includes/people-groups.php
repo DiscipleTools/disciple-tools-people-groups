@@ -84,9 +84,6 @@ class DT_People_Groups{
             $sections[] = 'contacts';
             $sections[] = 'groups';
         }
-        if ( $post_type === 'contacts' || $post_type === 'groups' ){
-            $sections[] = 'peoplegroups';
-        }
         return $sections;
     }
 
