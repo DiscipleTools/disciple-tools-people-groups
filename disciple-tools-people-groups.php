@@ -148,8 +148,8 @@ class DT_People_Groups_Plugin {
         $this->version             = '0.1';
 
         // sample rest api class
-        require_once( 'includes/rest-api.php' );
-        DT_People_Groups_Plugin_Endpoints::instance();
+//        require_once( 'includes/rest-api.php' );
+//        DT_People_Groups_Plugin_Endpoints::instance();
     }
 
     /**
