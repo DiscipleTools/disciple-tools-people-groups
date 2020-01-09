@@ -67,16 +67,7 @@ class DT_People_Groups{
     }
 
     public function p2p_init(){
-        p2p_register_connection_type([
-            'name' => 'peoplegroups_to_contacts',
-            'from' => 'peoplegroups',
-            'to' => 'contacts'
-        ]);
-        p2p_register_connection_type([
-            'name' => 'peoplegroups_to_groups',
-            'from' => 'peoplegroups',
-            'to' => 'groups'
-        ]);
+
     }
 
     public function dt_details_additional_section_ids( $sections, $post_type = "" ){
