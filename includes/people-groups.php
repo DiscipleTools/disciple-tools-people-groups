@@ -47,14 +47,14 @@ class DT_People_Groups{
                 'type' => 'connection',
                 "p2p_direction" => "to",
                 "p2p_key" => "contacts_to_peoplegroups",
-                'p2p_listing' => 'contacts'
+                'post_type' => 'contacts'
             ];
             $fields['groups'] = [
                 'name' => "Groups",
                 'type' => 'connection',
                 "p2p_direction" => "to",
                 "p2p_key" => "groups_to_peoplegroups",
-                'p2p_listing' => 'groups'
+                'post_type' => 'groups'
             ];
             $fields["location_grid"] = [
                 'name' => "Locations",
