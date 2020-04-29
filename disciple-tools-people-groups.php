@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Disciple Tools - People Groups
+ * Plugin Name: Disciple Tools - People Groups UI
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-people-groups
  * Description: Add a people groups tab to the frond end to manage and view people groups
  * Version:  0.1.0

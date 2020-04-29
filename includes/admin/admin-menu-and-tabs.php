@@ -60,7 +60,7 @@ class DT_People_Groups_Plugin_Menu {
      */
     public function register_menu() {
         add_menu_page( __( 'Extensions (DT)', 'disciple_tools' ), __( 'Extensions (DT)', 'disciple_tools' ), 'manage_dt', 'dt_extensions', [ $this, 'extensions_menu' ], 'dashicons-admin-generic', 59 );
-        add_submenu_page( 'dt_extensions', __( 'Starter Plugin', 'dt_people_groups_plugin' ), __( 'Starter Plugin', 'dt_people_groups_plugin' ), 'manage_dt', $this->token, [ $this, 'content' ] );
+        add_submenu_page( 'dt_extensions', __( 'People Groups UI', 'dt_people_groups_plugin' ), __( 'People Groups UI', 'dt_people_groups_plugin' ), 'manage_dt', $this->token, [ $this, 'content' ] );
     }
 
     /**
@@ -81,7 +81,7 @@ class DT_People_Groups_Plugin_Menu {
 
         ?>
         <div class="wrap">
-            <h2><?php esc_attr_e( 'People Groups', 'dt_people_groups_plugin' ) ?></h2>
+            <h2><?php esc_attr_e( 'People Groups UI', 'dt_people_groups_plugin' ) ?></h2>
             <hr style="border-top:1px solid darkgray">
             <span>&#x2705; Installed</span>
 
