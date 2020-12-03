@@ -116,7 +116,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Disciple Tools - Starter Plugin is intended to help developers and "
+"Disciple Tools - People Groups is intended to help developers and "
 "integrator jumpstart their extension"
 msgstr ""
 
