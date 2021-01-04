@@ -123,7 +123,7 @@ class DT_People_Groups_Plugin {
      */
     private function includes() {
         if ( is_admin() ) {
-            require_once('includes/admin/admin-menu-and-tabs.php');
+            require_once( 'includes/admin/admin-menu-and-tabs.php' );
         }
 
         require_once( 'includes/people-groups.php' );
