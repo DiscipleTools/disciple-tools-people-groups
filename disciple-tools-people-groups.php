@@ -122,7 +122,10 @@ class DT_People_Groups_Plugin {
      * @return void
      */
     private function includes() {
-        require_once( 'includes/admin/admin-menu-and-tabs.php' );
+        if ( is_admin() ) {
+            require_once('includes/admin/admin-menu-and-tabs.php');
+        }
+
         require_once( 'includes/people-groups.php' );
         new DT_People_Groups();
     }
