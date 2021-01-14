@@ -179,7 +179,7 @@ class DT_People_Groups_Plugin {
              * Also, see the instructions for version updating to understand the steps involved.
              * @see https://github.com/DiscipleTools/disciple-tools-version-control/wiki/How-to-Update-the-Starter-Plugin
              */
-            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-people-groups-version-control.json";
+            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-people-groups/master/version-control.json";
             Puc_v4_Factory::buildUpdateChecker(
                 $hosted_json,
                 __FILE__,
