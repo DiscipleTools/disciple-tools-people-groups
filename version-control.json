@@ -22,7 +22,7 @@
     "high": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-1544x500.jpg"
   },
   "sections": {
-    "description": "Disciple Tools - People Groups UI",
+    "description": "Disciple Tools - People Groups UI. This plugin expands the core people group tracking features inside Disciple Tools and adds a new tab that displace the aggregate connections to different people groups. ",
     "installation": "(Required) You must have Disciple.Tools Theme installed before using this plugin. Once Disciple.Tools is installed, you can use the normal Plugin system to install the plugin.",
     "changelog": ""
   }
