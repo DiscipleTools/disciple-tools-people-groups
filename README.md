@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-people-groups.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-people-groups)
 
-# People Groups Expansion
+# People Groups Tab
 
 This plugin expands the core people group tracking features inside Disciple Tools and adds a new tab that displace the aggregate connections to different people groups.
 
