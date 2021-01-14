@@ -8,7 +8,7 @@
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-people-groups
  * Requires at least: 4.7.0
  * (Requires 4.7+ because of the integration of the REST API at 4.7 and the security requirements of this milestone version.)
- * Tested up to: 4.9
+ * Tested up to: 5.6
  *
  * @package Disciple_Tools
  * @link    https://github.com/DiscipleTools
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-$dt_people_groups_required_dt_theme_version = '0.27.1';
+$dt_people_groups_required_dt_theme_version = '1.0';
 
 /**
  * Gets the instance of the `DT_People_Groups_Plugin` class.
@@ -146,16 +146,10 @@ class DT_People_Groups_Plugin {
         // Plugin directory paths.
         $this->includes_path      = trailingslashit( $this->dir_path . 'includes' );
 
-        // Plugin directory URIs.
-        $this->img_uri      = trailingslashit( $this->dir_uri . 'img' );
-
         // Admin and settings variables
         $this->token             = 'dt_people_groups_plugin';
         $this->version             = '0.1';
 
-        // sample rest api class
-//        require_once( 'includes/rest-api.php' );
-//        DT_People_Groups_Plugin_Endpoints::instance();
     }
 
     /**
@@ -188,7 +182,7 @@ class DT_People_Groups_Plugin {
         }
 
         // Internationalize the text strings used.
-        add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
+        add_action( 'after_setup_theme', array( $this, 'i18n' ), 51 );
     }
 
     /**
@@ -228,7 +222,21 @@ class DT_People_Groups_Plugin {
      * @return void
      */
     public function i18n() {
-        load_plugin_textdomain( 'dt_people_groups_plugin', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'languages' );
+        //Take from loadTextDomain() in /disciple-tools-theme/dt-core/libraries/plugin-update-checker/Puc/v4p5/UpdateChecker.php
+        // @link
+        $domain = 'disciple-tools-plugin'; // this must be the same as the slug for the plugin
+        $locale = apply_filters(
+            'plugin_locale',
+            ( is_admin() && function_exists( 'get_user_locale' ) ) ? get_user_locale() : get_locale(),
+            $domain
+        );
+
+        $mo_file = $domain . '-' . $locale . '.mo';
+        $path = realpath( dirname( __FILE__ ) . '/languages' );
+
+        if ($path && file_exists( $path )) {
+            load_textdomain( $domain, $path . '/' . $mo_file );
+        }
     }
 
     /**
@@ -239,7 +247,7 @@ class DT_People_Groups_Plugin {
      * @return string
      */
     public function __toString() {
-        return 'dt_people_groups_plugin';
+        return 'disciple-tools-plugin';
     }
 
     /**
@@ -250,7 +258,7 @@ class DT_People_Groups_Plugin {
      * @return void
      */
     public function __clone() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_people_groups_plugin' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!'), '0.1' );
     }
 
     /**
@@ -261,7 +269,7 @@ class DT_People_Groups_Plugin {
      * @return void
      */
     public function __wakeup() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_people_groups_plugin' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!'), '0.1' );
     }
 
     /**
