@@ -258,7 +258,7 @@ class DT_People_Groups_Plugin {
      * @return void
      */
     public function __clone() {
-        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!'), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!' ), '0.1' );
     }
 
     /**
@@ -269,7 +269,7 @@ class DT_People_Groups_Plugin {
      * @return void
      */
     public function __wakeup() {
-        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!'), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!' ), '0.1' );
     }
 
     /**
