@@ -126,8 +126,10 @@ class DT_People_Groups_Plugin {
             require_once( 'includes/admin/admin-menu-and-tabs.php' );
         }
 
-        require_once( 'includes/people-groups.php' );
-        new DT_People_Groups();
+        require_once( 'post-type/loader.php' );
+
+//        require_once( 'includes/people-groups.php' );
+
     }
 
     /**

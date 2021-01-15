@@ -182,3 +182,4 @@ class DT_People_Groups{
     }
 
 }
+DT_People_Groups::instance();
