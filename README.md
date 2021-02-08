@@ -6,8 +6,10 @@ This plugin expands the core people group tracking features inside Disciple Tool
 
 ---
 
-![admin menu](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-people-groups/master/documentation/admin-menu.png)
+
 
 ![details](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-people-groups/master/documentation/details-screenshot.png)
 
 ![list screenshot](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-people-groups/master/documentation/list-screenshot.png)
+
+![admin menu](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-people-groups/master/documentation/admin-menu.png)
