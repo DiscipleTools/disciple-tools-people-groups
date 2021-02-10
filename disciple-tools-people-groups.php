@@ -60,7 +60,7 @@ function dt_people_groups_plugin() {
 //    }
         return DT_People_Groups_Plugin::get_instance();
 }
-add_action( 'plugins_loaded', 'dt_people_groups_plugin' );
+add_action( 'after_setup_theme', 'dt_people_groups_plugin' );
 
 /**
  * Singleton class for setting up the plugin.

@@ -8,11 +8,11 @@ if ( !defined( 'ABSPATH' ) ) {
  */
 //add_action( 'dt_top_nav_desktop', 'dt_people_group_top_nav_desktop', 50 );
 //add_action( 'dt_off_canvas_nav', 'dt_people_group_top_nav_desktop', 50 );
-//function dt_people_group_top_nav_desktop() {
-//    ?>
+function dt_people_group_top_nav_desktop() {
+    ?>
 <!--    <li><a href="--><?php //echo esc_url( site_url( '/peoplegroups/' ) ); ?><!--">--><?php //esc_html_e( "People Groups", 'disciple-tools-people-groups' ); ?><!--</a></li>-->
-<!--    --><?php
-//}
+    <?php
+}
 
 
 /**
