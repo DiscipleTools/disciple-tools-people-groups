@@ -37,6 +37,7 @@ class DT_People_Groups_Plugin_Endpoints
                 [
                     'methods'  => WP_REST_Server::CREATABLE,
                     'callback' => [ $this, 'private_endpoint' ],
+                    'permission_callback' => '__return_true',
                 ],
             ]
         );
