@@ -6,7 +6,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 /**
  * Class DT_Starter_Base
- * Load the core post type hooks into the Disciple Tools system
+ * Load the core post type hooks into the Disciple.Tools system
  */
 class DT_People_Groups_Base extends DT_Module_Base {
 
