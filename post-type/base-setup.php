@@ -123,10 +123,11 @@ class DT_People_Groups_Base extends DT_Module_Base {
             $fields['tags'] = [
                 'name'        => __( 'Tags', 'disciple-tools-people-groups' ),
                 'description' => _x( 'A useful way to group related items.', 'Optional Documentation', 'disciple-tools-people-groups' ),
-                'type'        => 'multi_select',
+                'type'        => 'tags',
                 'default'     => [],
                 'tile'        => 'other',
                 'custom_display' => true,
+                'icon' => get_template_directory_uri() . "/dt-assets/images/tag.svg",
             ];
             $fields["follow"] = [
                 'name'        => __( 'Follow', 'disciple-tools-people-groups' ),
