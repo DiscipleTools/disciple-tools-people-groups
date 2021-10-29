@@ -65,8 +65,8 @@ class DT_People_Groups_Base extends DT_Module_Base {
     }
 
     public function after_setup_theme(){
-        if ( class_exists( 'Disciple_Tools_Post_Type_Template' )) {
-            new Disciple_Tools_Post_Type_Template( 'peoplegroups', __( 'People Group', 'disciple-tools-people-groups'), __( 'People Groups', 'disciple-tools-people-groups') );
+        if ( class_exists( 'Disciple_Tools_Post_Type_Template' ) ) {
+            new Disciple_Tools_Post_Type_Template( 'peoplegroups', __( 'People Group', 'disciple-tools-people-groups' ), __( 'People Groups', 'disciple-tools-people-groups' ) );
         }
     }
     public function dt_set_roles_and_permissions( $expected_roles ){
@@ -602,7 +602,7 @@ class DT_People_Groups_Base extends DT_Module_Base {
         if ( get_current_user_id() ){
 
             $requires_update = get_post_meta( $record_id, "requires_update", true );
-            if ( $requires_update == "yes" || $requires_update == true || $requires_update == "1"){
+            if ( $requires_update == "yes" || $requires_update == true || $requires_update == "1" ){
                 //don't remove update needed if the user is a dispatcher (and not assigned to the groups.)
                 if ( DT_Posts::can_view_all( self::post_type() ) ){
                     if ( dt_get_user_id_from_assigned_to( get_post_meta( $record_id, "assigned_to", true ) ) === get_current_user_id() ){
@@ -669,7 +669,7 @@ class DT_People_Groups_Base extends DT_Module_Base {
             do_action( "dt_'.$this->post_type.'_created", $post_id, $initial_fields );
 
             $post_array = DT_Posts::get_post( $this->post_type, $post_id, true, false );
-            if ( isset( $post_array["assigned_to"] )) {
+            if ( isset( $post_array["assigned_to"] ) ) {
                 if ( $post_array["assigned_to"]["id"] ) {
                     DT_Posts::add_shared( $this->post_type, $post_id, $post_array["assigned_to"]["id"], null, false, false, false );
                 }

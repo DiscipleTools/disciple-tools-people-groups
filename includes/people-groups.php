@@ -23,7 +23,7 @@ class DT_People_Groups{
 
 
     public function after_setup_theme(){
-        if ( class_exists( 'Disciple_Tools_Post_Type_Template' )) {
+        if ( class_exists( 'Disciple_Tools_Post_Type_Template' ) ) {
             new Disciple_Tools_Post_Type_Template( "peoplegroups", 'People Group', 'People Groups' );
         }
     }
@@ -71,7 +71,7 @@ class DT_People_Groups{
     }
 
     public function dt_details_additional_section_ids( $sections, $post_type = "" ){
-        if ( $post_type === "peoplegroups"){
+        if ( $post_type === "peoplegroups" ){
             $sections[] = 'contacts';
             $sections[] = 'groups';
         }
