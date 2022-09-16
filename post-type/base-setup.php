@@ -627,36 +627,36 @@ class DT_People_Groups_Base extends DT_Module_Base {
 
     // filter at the start of post creation
     public function dt_post_create_fields( $fields, $post_type ){
-        if ( $post_type === $this->post_type ) {
-            /**
-             * These set the initial value for fields if no value is given.
-             */
-            if ( !isset( $fields["status"] ) ) {
-                $fields["status"] = "active";
-            }
-            if ( !isset( $fields["assigned_to"] ) ) {
-                $fields["assigned_to"] = sprintf( "user-%d", get_current_user_id() );
-            }
-            if ( !isset( $fields["start_date"] ) ) {
-                $fields["start_date"] = time();
-            }
-
-            if ( isset( $fields["assigned_to"] ) ) {
-                if ( filter_var( $fields["assigned_to"], FILTER_VALIDATE_EMAIL ) ){
-                    $user = get_user_by( "email", $fields["assigned_to"] );
-                    if ( $user ) {
-                        $fields["assigned_to"] = $user->ID;
-                    } else {
-                        return new WP_Error( __FUNCTION__, "Unrecognized user", $fields["assigned_to"] );
-                    }
-                }
-                //make sure the assigned to is in the right format (user-1)
-                if ( is_numeric( $fields["assigned_to"] ) ||
-                    strpos( $fields["assigned_to"], "user" ) === false ){
-                    $fields["assigned_to"] = "user-" . $fields["assigned_to"];
-                }
-            }
-        }
+//        if ( $post_type === $this->post_type ) {
+//            /**
+//             * These set the initial value for fields if no value is given.
+//             */
+//            if ( !isset( $fields["status"] ) ) {
+//                $fields["status"] = "active";
+//            }
+//            if ( !isset( $fields["assigned_to"] ) ) {
+//                $fields["assigned_to"] = sprintf( "user-%d", get_current_user_id() );
+//            }
+//            if ( !isset( $fields["start_date"] ) ) {
+//                $fields["start_date"] = time();
+//            }
+//
+//            if ( isset( $fields["assigned_to"] ) ) {
+//                if ( filter_var( $fields["assigned_to"], FILTER_VALIDATE_EMAIL ) ){
+//                    $user = get_user_by( "email", $fields["assigned_to"] );
+//                    if ( $user ) {
+//                        $fields["assigned_to"] = $user->ID;
+//                    } else {
+//                        return new WP_Error( __FUNCTION__, "Unrecognized user", $fields["assigned_to"] );
+//                    }
+//                }
+//                //make sure the assigned to is in the right format (user-1)
+//                if ( is_numeric( $fields["assigned_to"] ) ||
+//                    strpos( $fields["assigned_to"], "user" ) === false ){
+//                    $fields["assigned_to"] = "user-" . $fields["assigned_to"];
+//                }
+//            }
+//        }
         return $fields;
     }
 
