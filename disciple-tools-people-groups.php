@@ -1,9 +1,9 @@
 <?php
 /**
- *Plugin Name: Disciple.Tools - People Groups UI
+ * Plugin Name: DEPRECATED - Disciple.Tools - People Groups UI
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-people-groups
- * Description: Add a people groups tab to the front end to manage and view people groups
- * Version:  0.2.1
+ * Description: Old plugin. Please Delete me.
+ * Version:  0.3.0
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-people-groups
  * Requires at least: 4.7.0
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-$dt_people_groups_required_dt_theme_version = '1.0';
+$dt_people_groups_required_dt_theme_version = '1.32';
 
 /**
  * Gets the instance of the `DT_People_Groups_Plugin` class.
@@ -60,7 +60,7 @@ function dt_people_groups_plugin() {
 //    }
         return DT_People_Groups_Plugin::get_instance();
 }
-add_action( 'after_setup_theme', 'dt_people_groups_plugin' );
+//add_action( 'after_setup_theme', 'dt_people_groups_plugin' );
 
 /**
  * Singleton class for setting up the plugin.
@@ -328,7 +328,7 @@ if ( !function_exists( "dt_hook_ajax_notice_handler" ) ){
  * @see https://github.com/DiscipleTools/disciple-tools-version-control/wiki/How-to-Update-the-Starter-Plugin
  */
 add_action( 'plugins_loaded', function (){
-    if ( is_admin() && !( is_multisite() && class_exists( "DT_Multisite" ) ) || wp_doing_cron() ){
+    if ( is_admin() && !( is_multisite() && class_exists( "DT_Multisite" ) ) ){
         if ( ! class_exists( 'Puc_v4_Factory' ) ) {
             // find the Disciple.Tools theme and load the plugin update checker.
             foreach ( wp_get_themes() as $theme ){
